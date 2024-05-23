@@ -29,19 +29,17 @@ Ensure you have Python installed on your system. You can download and install it
 
 ## Usage Instructions
 
-1. **Install Python:** Make sure you have Python installed on your system. You can download and install it from the official Python website: [python.org](https://www.python.org/).
-
-2. **Clone the Repository:** 
+1. **Clone the Repository:** 
    
-   git clone https://github.com/your-username/hangman_project.git
+   git clone https://github.com/carlacostan/hangman192.git
 
-3. **Navigate to the Project Directory:**
+2. **Navigate to the Project Directory:**
     
-    cd hangman_project
+    cd hangman192
 
-4. **Run the Game:** 
+3. **Run the Game:** 
 
-    python hangman.py
+    python milestone_5.py
 
 
 ## File Structure
