@@ -1,14 +1,20 @@
 import random
+import milestone_2
+
+# Retrieve the word list from the milestone_2 module
+word_list = milestone_2.word_list
 
 class Hangman:
     
     def __init__(self, word_list, num_lives=5):
+
         self.word_list = word_list
         self.num_lives = num_lives
         self.word = random.choice(word_list).lower()
         self.word_guessed = ['_' for _ in self.word]
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
+        
 
     def check_guess(self, guess): #This method checks the guessed letter in this instance of the class
 
@@ -36,3 +42,24 @@ class Hangman:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
                 break
+
+
+def play_game(word_list): #Starts the Hangman game
+    
+    num_lives = 5
+    game = Hangman(word_list, num_lives)
+    
+    while True:
+        if game.num_lives == 0:
+            print("You lost!")
+            break
+        elif game.num_letters > 0:
+            game.ask_for_input()
+        else:
+            print("Congratulations. You won the game!")
+            break
+
+if __name__ == '__main__':
+
+    play_game(word_list)
+
